@@ -21,8 +21,13 @@ keyboard_commands() {
   esac
 }
 
+print_pid_info() {
+  printf "%d %s %s %d %d %d %d %d\n" $1 ${s_comm[$1]} ${s_state[$1]} ${s_ppid[$1]} \
+    ${s_pgrp[$1]} ${s_session[$1]} ${s_tty_nr[$1]} ${s_rss[$1]}
+}
+
 show_info() {
-  
+  for pid in $pids
 }
 
 tput civis
